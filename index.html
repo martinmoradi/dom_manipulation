@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mealbytes</title>
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body class="bg-gray-100">
+
+  <div class="wrapper">
+
+    <div id="popup" class="popup__wrapper hidden">
+      <div class="popup__container relative">
+        <button
+          class="fixed top-0 right-0 absolute closePopup border border-gray-300 hover:bg-gray-300 rounded-sm">Close</button>
+        <h1 class="popup__title">Thank you for visiting this popup!</h1>
+        <p>I hope you enjoyed this wonderful intrusive experience</p>
+      </div>
+    </div>
+
+    <div class="container pt-48">
+
+      <div class="content">
+        <div class="flex flex-row justify-center">
+          <div class="border-gray-300 border rounded-md pt-40 pl-8 bg-white">
+            <h1 class="text-3xl text-center">Mealbytes</h1>
+            <p class="text-center text-xl text-gray-500 pr-8 mt-12 italic">Fresh produces, cooked with love</p>
+          </div>
+          <img class="max-w-xl rounded-md" src="./img/img.jpg" alt="Food illustration" srcset="">
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="flex flex-col justify-center">
+          <h1 class="text-3xl text-center">Daily menu :</h1>
+          <p id="dailyMenu" class="text-center mt-8"></p>
+          <button id="menuGenerator"
+            class="border-gray-300 p-4 mt-8 border rounded-xl max-w-sm hover:bg-blue-500 mx-auto">Generate new
+            menu</button>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="grid-container mx-auto p-8">
+          <div draggable="true" class="box">
+            <img src="./img/gallery_2.jpg" class="object-cover" alt="" srcset="">
+          </div>
+          <div draggable="true" class="box">
+            <img src="./img/gallery_3.jpg" alt="" srcset="">
+          </div>
+          <div draggable="true" class="box">
+            <img src="./img/gallery_4.jpg" alt="" srcset="">
+          </div>
+          <div draggable="true" class="box">
+            <img src="./img/gallery_5.jpg" alt="" srcset="">
+          </div>
+          <div draggable="true" class="box">
+            <img src="./img/gallery_1.jpg" alt="" srcset="">
+          </div>
+          <div draggable="true" class="box">
+            <img src="./img/gallery_6.jpg" alt="" srcset="">
+          </div>
+        </div>
+      </div>
+
+
+
+    </div>
+
+    <div class="sm:hidden">
+      <label for="tabs" class="sr-only">Select a tab</label>
+      <select id="tabs" name="tabs"
+        class="block w-full focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md">
+        <option>Concept</option>
+        <option>Menu</option>
+        <option>Photos</option>
+      </select>
+    </div>
+    <div class="hidden sm:block">
+      <nav class="flex space-x-4 justify-center mt-8" aria-label="Tabs">
+        <button id="tabsButton" href="#"
+          class="text-gray-500 hover:text-gray-700 px-3 py-2 font-medium text-sm rounded-md border bg-gray-50">
+          Concept
+        </button>
+        <button id="tabsButton" href="#"
+          class="text-gray-500 hover:text-gray-700 px-3 py-2 font-medium text-sm rounded-md border bg-gray-50">
+          Menu
+        </button>
+        <button id="tabsButton" href="#"
+          class="text-gray-500 hover:text-gray-700 px-3 py-2 font-medium text-sm rounded-md border bg-gray-50">
+          Photos
+        </button>
+      </nav>
+    </div>
+
+  </div>
+  <script src="./js/tabs.js"></script>
+  <script src="./js/menu.js"></script>
+  <script src="js/drag.js"></script>
+  <script src="./js/exitPopup.js"></script>
+</body>
+
+</html>
